@@ -1,2 +1,4 @@
 /Cpp-Primer
 .vs
+*.obj
+*.exe

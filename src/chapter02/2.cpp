@@ -1,3 +1,5 @@
+#include "Sales_item.h"
+#include <iostream>
 
 int main()
 {
@@ -20,7 +22,7 @@ int main()
 	// 2.29
 	//i = ic;
 	*/
-
+	/*
 	// 2.4.3 상위 const
 	int i = 0;
 	int* const pl = &i;
@@ -75,4 +77,76 @@ int main()
 	// 2.32
 	int null = 0, *p = &null ;
 
+	typedef double wages;
+	typedef wages base, * p;
+
+	using SI = Sales_item;
+
+	wages hourly, weekly;
+	SI item;
+
+	typedef char* pstring;
+	const pstring cstr = 0;
+	const pstring* ps;
+	*/
+
+	/*
+	// 2.5.2 auto 타입 지정자
+	int i = 0, & r = i;
+	auto a = r;
+
+	const int ci = i, & cr = ci;
+	auto b = ci;
+	auto c = cr;
+	auto d = &i;
+	auto e = &ci;
+
+	const auto f = ci;
+
+	auto& g = ci;
+	//auto& h = 42;
+	const auto& j = 42;
+
+	auto k = ci, & l = i;
+	auto& m = ci, * p = &ci;
+	//auto& n = i, * p2 = &ci;
+
+	std::cout << "a: " << a << "\nb: " << b << "\nc: " << c << "\ng: " << g << "\nj :" << j << "\nk: " << k << "\nm: " << m << std::endl;
+
+	// 2.33
+	a = 42;
+	b = 42;
+	c = 42;
+	//d = 42;
+	//e = 42;
+	//g = 42;
+	*/
+
+	/*
+	const int i = 42;
+	auto j = i;
+	const auto& k = i;
+	auto* p = &i;
+	const auto j2 = i, & k2 = i;
+
+	const int ci = 0, & cj = ci;
+	decltype(ci) x = 0;
+	decltype(cj) y = x;
+	//decltype(cj) z;
+	*/
+
+	/*int a = 3, b = 4;
+	decltype(a) c = a;
+	decltype((b)) d = a;
+	++c;
+	++d;
+	std::cout << "c: " << c << "\nd: " << d << std::endl;*/
+
+	int a = 3, b = 4;
+	decltype(a) c = a;
+	decltype(a = b) d = a;
+
+
+
+	return 0;
 }
