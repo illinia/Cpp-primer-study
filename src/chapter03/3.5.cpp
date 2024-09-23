@@ -109,4 +109,26 @@ int main()
 	int* p = &ia[2];
 	int j = p[1];
 	int k = p[-2];
+
+	char ca[] = { 'C', '+', '+' };
+	//cout << strlen(ca) << endl;
+
+	string s1 = "A string example";
+	string s2 = "A differet string";
+	if (s1 < s2);
+
+	const char ca1[] = "A string example";
+	const char ca2[] = "A different string";
+	if (ca1 < ca2);
+
+	if (strcmp(ca1, ca2) < 0);
+
+	string largeStr = s1 + " " + s2;
+
+	char largeChar[100];
+	strcpy(largeChar, ca1);
+	strcat(largeChar, " ");
+	strcat(largeChar, ca2);
+
+
 }
