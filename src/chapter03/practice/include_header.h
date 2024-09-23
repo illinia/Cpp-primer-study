@@ -9,3 +9,7 @@ using std::string;
 
 #include <vector>
 using std::vector;
+
+#include <iterator>
+using std::begin;
+using std::end;

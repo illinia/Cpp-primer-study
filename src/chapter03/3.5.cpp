@@ -42,4 +42,71 @@ int main()
 	for (auto i : scores)
 		cout << i << " ";
 	cout << endl;
+
+	//string nums[] = { "one", "tow", "three" };
+	//string* p = &nums[0];
+	//
+	//string* p2 = nums;
+
+	int ia[] = { 0,1,2,3,4,5,6,7,8,9 };
+	auto ia2(ia);
+	//ia2 = 42;
+
+	decltype(ia) ia3;
+	//ia3 = p;
+	//ia3[4] = i;
+
+	int arr[] = { 0,1,2,3,4,5,6,7,8,9 };
+	int* p = arr;
+	++p;
+
+	int* e = &arr[10];
+
+	for (int* b = arr; b != e; ++b)
+		cout << *b << endl;
+
+	int ia[] = { 0,1,2,3,4,5,6,7,8,9 };
+	int* beg = begin(ia);
+	int* last = end(ia);
+
+	// pbeg는 arr의 첫 요소를, pend는 마지막 요소 바로 다음 위치
+	int* pbeg = begin(arr), * pend = end(arr);
+
+	// 음수인 첫 번째 요소를 찾으며 모든 요소를 확인하면 멈춘다
+	while (pbeg != pend && *pbeg >= 0)
+		++pbeg;
+
+	constexpr size_t sz = 5;
+	int arr[sz] = { 1,2,3,4,5 };
+	int* ip = arr;
+	int* ip2 = ip + 4;
+
+	int* p = arr + sz;
+	//int* p2 = arr + 10;
+
+	ptrdiff_t n = end(arr) - begin(arr);
+	
+	int* b = arr, * e = arr + sz;
+	while (b < e) {
+		++b;
+	}
+
+	/*int i = 0;
+	int sz1 = 42;
+	int* p1 = &i, * e = &sz1;
+	while (p1 < e) {}*/
+
+	int ia[] = { 0, 2, 4, 6, 8 };
+	int last = *(ia + 4);
+	//last = *ia + 4;
+
+	int ia[] = { 0, 2, 4, 6, 8 };
+
+	int i = ia[2];
+	int* p = ia;
+	i = *(p + 2);
+
+	int* p = &ia[2];
+	int j = p[1];
+	int k = p[-2];
 }
