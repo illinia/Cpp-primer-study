@@ -130,5 +130,13 @@ int main()
 	strcat(largeChar, " ");
 	strcat(largeChar, ca2);
 
+	string s("Hello World");
 
+	//char* str = s;
+	const char* str = s.c_str();
+
+	int int_arr[] = { 0,1,2,3,4,5 };
+	vector<int> ivec(begin(int_arr), end(int_arr));
+
+	vector<int> subVec(int_arr + 1, int_arr + 4);
 }
