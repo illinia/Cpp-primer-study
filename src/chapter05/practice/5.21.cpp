@@ -1,4 +1,5 @@
 #include "include_header.h"
+#include "cctype"
 
 int main() {
 	string buf, tmp, result;
@@ -6,10 +7,14 @@ int main() {
 
 	while (cin >> buf) {
 		if (buf == tmp) {
-			result = buf;
-			break;
+			if (std::isupper(buf[0])) {
+				result = buf;
+				break;
+			}
+			else continue;
+			
 		}
-		else if (cin.eof()) break;
+		else if (cin) break;
 		else {
 			tmp = buf;
 		}
