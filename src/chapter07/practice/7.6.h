@@ -1,3 +1,4 @@
+#pragma once
 #include "string"
 #include <istream>
 #include <ostream>
@@ -30,7 +31,7 @@ Sales_data& Sales_data::combine(const Sales_data& rhs) {
 	return *this;
 }
 
-istream &read(istream &is, Sales_data &item) 
+istream& read(istream& is, Sales_data& item)
 {
 	double price = 0;
 	is >> item.bookNo >> item.units_sold >> price;
